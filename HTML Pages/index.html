@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="scripting.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styling.css">
+    <title>Programming Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div id="errorBoxOverlay" class="overlayBox">
+            <div id="errorMSGBox" class="alertBox">
+                <span id="errorMSG">NO ERROR MESSAGE SET</span>
+                <br>
+                <div style="padding-top: 15px;">
+                    <label for="closeErrorMSG" class="baseBTN">Close Error Message</label>
+                    <input id="closeErrorMSG" type="button" onclick="CloseErrorMessage()" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </header>
+    <body>
+        <nav>
+            <input type="checkbox" id="checkMENU">
+            <label for="checkMENU" class="menuBTN"><i class="fas fa-bars"></i></label>
+            <label class="portfolioLogo">Portfolio</label>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services & Skills</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Project</a></li>
+            </ul>
+        </nav>
+    </body>
+    <aside>
+        <div class="characterSheetHeader">
+            <div class="headerColumns">
+                <div class="avatarContainer">
+                    <div class="avatarImageCard">
+                        <img id="avatarImage" src="assets/svg/ImagePlaceholderPNG.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <table class="simpleTable">
+            <tr>
+                <th>Main Site Test</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <th><span class="textBoxStyle_Two" id="classSpecificInformationTitle">You Should Not See This</span></th>
+                            <td style="width:100%;"><span class="textBoxStyle_Two" id="classSpecificInformationBio">You Should Not See This</span></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <table class="simpleTable">
+            <tr>
+                <th>Footer Links And Stuff</th>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+
+</html>
