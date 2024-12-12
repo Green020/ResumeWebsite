@@ -223,6 +223,11 @@
        display: grid;
        grid-template-columns: 55% 45%;
    }
+   .twoColumns_2575 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
 
    .threeColumns {
        display: grid;
