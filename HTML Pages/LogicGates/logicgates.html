@@ -1,30 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script src="logicgates.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <link rel="stylesheet" href="logicgates.css">
         <title>Logic Gates</title>
     </head>
     <body>
-        <button class="btn" onclick="RunLogicGate()">RUN</button>
-        <select id="INPUT_1">
-            <option value="0">0</option>
-            <option value="1">1</option>
-        </select>
-        <select id="INPUT_2">
-            <option value="0">0</option>
-            <option value="1">1</option>
-        </select>
-        <select id="GATE_1">
-            <option value="OPEN">OPEN</option>
-            <option value="AND">AND</option>
-            <option value="OR">OR</option>
-            <option value="XOR">XOR</option>
-            <option value="NOT">NOT</option>
-            <option value="NAND">NAND</option>
-            <option value="NOR">NOR</option>
-            <option value="XNOR">XNOR</option>
-        </select>
-        <input id="OUTPUT_1">
+        <table class="simpleTable">
+            <tr>
+                <th>Logic Gate Examples And Results</th>
+            </tr>
+            <tr>
+                <table>
+                    <tr>
+                        <th>INPUT_1</th>
+                        <th>INPUT_2</th>
+                        <th>GATE</th>
+                        <th>RESULT</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="INPUT_1" onchange="RunLogicGate()"></td>
+                        <td><input type="checkbox" id="INPUT_2" onchange="RunLogicGate()"></td>
+                        <td>
+                            <select id="GATE_1" onchange="RunLogicGate()">
+                                <option value="OPEN">OPEN</option>
+                                <option value="AND">AND</option>
+                                <option value="OR">OR</option>
+                                <option value="XOR">XOR</option>
+                                <option value="NOT">NOT</option>
+                                <option value="NAND">NAND</option>
+                                <option value="NOR">NOR</option>
+                                <option value="XNOR">XNOR</option>
+                            </select>
+                        </td>
+                        <td><input id="OUTPUT_1"></td>
+                    </tr>
+                </table>
+            </tr>
+
+        </table>
+        <br>
+        <table class="simpleTable">
+            <tr>
+                <th>Logic Gate Examples And Results</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <th>INPUT_1</th>
+                            <th>INPUT_2</th>
+                            <th>GATE</th>
+                            <th>RESULT</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>OPEN</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>OPEN</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>AND</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>AND</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>AND</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>AND</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>OR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>OR</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>OR</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>OR</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>NOT</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>NOT</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>NAND</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>NAND</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>NAND</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>NAND</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>NOR</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>NOR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>NOR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>NOR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>XOR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>XOR</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>XOR</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>XOR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>XNOR</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>XNOR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>XNOR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>XNOR</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>

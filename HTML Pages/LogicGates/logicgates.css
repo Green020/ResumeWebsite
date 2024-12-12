@@ -1,0 +1,38 @@
+.simpleTable {
+    border: 2px solid #0B2B26;
+    background-color: #DAF1DE;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.simpleTable td {
+    border: 2px solid #0B2B26;
+    border-radius: 6px;
+    padding: 3px 5px;
+}
+
+.simpleTable th {
+    background: #0B2B26;
+    border: 2px solid #0B2B26;
+    border-radius: 6px;
+    padding: 3px 5px;
+    text-align: center;
+    vertical-align: middle;
+    color: #E5E5F7;
+}
+
+.simpleTable tbody td {
+    font-size: 14px;
+    color: #0F0F0F;
+
+}
+
+.simpleTable thead {
+    background: #0B2B26;
+}
+
+.simpleTable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #E5E5F7;
+}
