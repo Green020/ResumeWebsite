@@ -7,14 +7,53 @@
         <meta name="viewport" content="width=device-width, intitial-scale=1.0">
         <link rel="stylesheet" href="logicgates.css">
         <title>Logic Gates</title>
+        <div id="messageBoxOverlay" class="overlayBox">
+            <div id="messageMSGBox" class="alertBox">
+                <span id="messageMSG">NO MESSAGE SET</span>
+                <br>
+                <div style="padding-top: 15px;">
+                    <label for="closeMessageMSG" class="baseBTN">Close Message</label>
+                    <input id="closeMessageMSG" type="button" onclick="CloseMessage()" style="display: none;">
+                </div>
+            </div>
+        </div>
     </head>
     <body>
         <table class="simpleTable">
             <tr>
-                <th>Logic Gate Examples And Results</th>
+                <td>
+                    <input type="text" id="INPUT_NAME" placeholder="Input Name">
+                    <button onclick="AddInput()">ADD INPUT</button>
+                </td>
+                <td>
+                    <!-- <input type="text" id="GATE_NAME" placeholder="Gate Name">
+                    <button onclick="AddGate()">ADD GATE</button> -->
+                    <select id="GATE_1" onchange="RunLogicGate()">
+                        <option value="OPEN">OPEN</option>
+                        <option value="AND">AND</option>
+                        <option value="OR">OR</option>
+                        <option value="XOR">XOR</option>
+                        <option value="NOT">NOT</option>
+                        <option value="NAND">NAND</option>
+                        <option value="NOR">NOR</option>
+                        <option value="XNOR">XNOR</option>
+                    </select>
+                </td>
+                <td>
+                    <input id="OUTPUT_1">
+
+                    <!-- <input type="text" id="RESULT_NAME" placeholder="Result Name">
+                    <button onclick="AddResult()">ADD RESULT</button> -->
+                </td>
+            </tr>
+        </table>
+        <div id="inputList"></div>
+        <table class="simpleTable">
+            <tr>
+                <th>Simple Logic Gate</th>
             </tr>
             <tr>
-                <table>
+                <!-- <table>
                     <tr>
                         <th>INPUT_1</th>
                         <th>INPUT_2</th>
@@ -38,9 +77,8 @@
                         </td>
                         <td><input id="OUTPUT_1"></td>
                     </tr>
-                </table>
+                </table> -->
             </tr>
-
         </table>
         <br>
         <table class="simpleTable">

@@ -1,71 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="scripting.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 <head>
+    <title>Dakota Sheetz Portfolio Project</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styling.css">
-    <title>Programming Portfolio</title>
 </head>
 
-<body onload="OnLoadBuild()">
-    <header>
-        <div id="messageBoxOverlay" class="overlayBox">
-            <div id="messageMSGBox" class="alertBox">
-                <span id="messageMSG">NO MESSAGE SET</span>
-                <br>
-                <div style="padding-top: 15px;">
-                    <label for="closeMessageMSG" class="baseBTN">Close Message</label>
-                    <input id="closeMessageMSG" type="button" onclick="CloseMessage()" style="display: none;">
-                </div>
+<body>
+    <!-- Error Message Box -->
+    <div id="messageBoxOverlay" class="overlayBox">
+        <div id="messageMSGBox" class="alertBox">
+            <span id="messageMSG">NO MESSAGE SET</span>
+            <br>
+            <div style="padding-top: 15px;">
+                <label for="closeMessageMSG" class="baseBTN">Close Message</label>
+                <input id="closeMessageMSG" type="button" onclick="CloseMessage()" style="display: none;">
             </div>
         </div>
-    </header>
-    <nav>
-        <input type="checkbox" id="checkMENU">
-        <label for="checkMENU" class="menuBTN"><i class="fas fa-bars"></i></label>
-        <label class="portfolioLogo">Portfolio</label>
-        <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services & Skills</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Project</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="headerColumns">
-            <div class="avatarContainer">
-                <div class="avatarImageCard">
-                    <img id="avatarImage" src="assets/svg/ImagePlaceholderPNG.png">
+    </div>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="menuToggle()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#SimpleWebProjects" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HTML, CSS & Javascript Projects</a>
+            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT TWO</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT THREE</a>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#SimpleWebProjects" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">HTML, CSS & Javascript Projects</a>
+        <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">PROJECT TWO</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">PROJECT THREE</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:150px">
+        <body class="w3-light-grey">
+            <!-- Page Container -->
+            <div class="w3-content w3-margin-top" style="max-width:1400px;">
+                <!-- The Grid -->
+                <div class="w3-row-padding">
+                    <!-- Left Column -->
+                    <div class="w3-third">
+                        <div class="w3-white w3-text-grey w3-card-4">
+                            <div class="w3-display-container">
+                                <div class="avatarImageCard">
+                                    <img id="avatarImage" src="assets/images/profile.jpg" style="width:100%" alt="Avatar">
+                                </div>
+                            </div>
+                            <div class="w3-container">
+                                <p><i class="fa fa-id-badge fa-fw w3-margin-right w3-large w3-text-teal"></i>Dakota Sheetz</p>
+                                <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Jeannette, PA</p>
+                                <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:dsheetz020@gmail.com">Email Me</a></p>
+                                <p><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://github.com/Green020">GitHub Link</a></p>
+                                <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(724) 691-2176</p>
+                                <hr>
+
+                                <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Programming Languages</b></p>
+                                <p>● C / cSharp / C++</p>
+                                <p>● Unity & Unreal Engine</p>
+                                <p>● Angular / AngularJS</p>
+                                <p>● ASP.NET Core</p>
+                                <p>● .NET Framework</p>
+                                <p>● .NET Core</p>
+                                <p>● Javascript</p>
+                                <p>● SQL</p>
+                                <p>● Typescript</p>
+                                <p>● XML</p>
+                                <p>● API’s</p>
+                                <p>● Node.js</p>
+                            </div>
+                            <br>
+                        </div><br>
+
+                        <!-- End Left Column -->
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="w3-twothird">
+
+                        <div class="w3-container w3-card w3-white w3-margin-bottom">
+                            <h2 class="w3-text-grey w3-padding-16"><i
+                                    class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                            <div class="w3-container">
+                                <h4 class="w3-opacity"><b>Powerex, INC</b></h4>
+                                <h5 class="w3-opacity">Youngwood, PA - Data Analyst, Application Developer</h5>
+                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>FEBRUARY 2022 - MAY 2024<!-- <span class="w3-tag w3-teal w3-round">Current</span> --></h6>
+                                <p>Managing projects with multiple departments in order to better optimize the
+                                    companies’ applications, websites and data management processes. As well as
+                                    increasing plant productivity.</p>
+                                <hr>
+                            </div>
+                            <div class="w3-container">
+                                <h4 class="w3-opacity"><b>Westmoreland CaseManagement and Supports, INC</b></h4>
+                                <h5 class="w3-opacity">Greensburg PA - IT Development and Services Specialist</h5>
+                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>FEBRUARY 2021 - FEBRUARY 2022</h6>
+                                <p>Worked with users and IT support to develop forms, manage workflows and
+                                    generate reporting services on the databases and maintained these connections.
+                                    Also managed third party application integration with our systems.</p>
+                                <hr>
+                            </div>
+                            <div class="w3-container">
+                                <h4 class="w3-opacity"><b>Best Buy</b></h4>
+                                <h5 class="w3-opacity">Monroeville PA - Geek Squad ARA</h5>
+                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>NOVEMBER 2020 - FEBRUARY 2021</h6>
+                                <p>Provided support as a base IT support role here while looking to advance my career.</p>
+                                <hr>
+                            </div>
+                            <div class="w3-container">
+                                <h4 class="w3-opacity"><b>Pomeroy</b></h4>
+                                <h5 class="w3-opacity">Pittsburgh PA - IT Tech</h5>
+                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>SEPTEMBER 2020 - NOVEMBER 2020</h6>
+                                <p>Hired into an IT support role here while moving back home during Covid. This was
+                                    a contract position working with doctors & nurses in a hospital environment to
+                                    provide on site support.</p>
+                                <hr>
+                            </div>
+                            <div class="w3-container">
+                                <h4 class="w3-opacity"><b>Edinboro University</b></h4>
+                                <h5 class="w3-opacity">Edinboro PA — ITS Student Tech</h5>
+                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>AUGUST 2014 - MAY 2019</h6>
+                                <p>First IT Support role while attending college functioning as a Tier 1 / Tier 2 IT Support Role.</p>
+                                <hr>
+                            </div>
+                        </div>
+
+                        <div class="w3-container w3-card w3-white">
+                            <h2 class="w3-text-grey w3-padding-16"><i
+                                    class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education
+                            </h2>
+                            <div class="w3-container">
+                                <h4 class="w3-opacity"><b>Edinboro University, Edinboro PA</b></h4>
+                                <h5 class="w3-opacity">BS Computer Science: Game and Virtual World</h5>
+                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Graduated: May 4th 2019</h6>
+                                <hr>
+                            </div>
+                            <div class="w3-container">
+                                <h4 class="w3-opacity"><b>Edinboro University, Edinboro PA</b></h4>
+                                <h5 class="w3-opacity">BA Individualized Studies: Computer Animation</h5>
+                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Graduated: May 4th 2019</h6>
+                                <hr>
+                            </div>
+                        </div>
+                        <!-- End Right Column -->
+                    </div>
+                    <!-- End Grid -->
+                </div>
+                <!-- End Page Container -->
+            </div>
+
+            <!-- The HTML CSS & Javascript Section -->
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="SimpleWebProjects">
+                <div class="w3-container w3-card w3-white">
+                    <h2 class="w3-wide">HTML, CSS & Javascript Projects</h2>
+                    <div class="w3-row w3-padding-32">
+                        <div class="w3-third">
+                            <p>Name</p>
+                            <img src="assets/svg/ImagePlaceholderPNG.png" class="w3-round w3-margin-bottom"
+                                alt="Random Name" style="width:60%">
+                        </div>
+                        <div class="w3-third">
+                            <p>Name</p>
+                            <img src="assets/svg/ImagePlaceholderPNG.png" class="w3-round w3-margin-bottom"
+                                alt="Random Name" style="width:60%">
+                        </div>
+                        <div class="w3-third">
+                            <p>Name</p>
+                            <img src="assets/svg/ImagePlaceholderPNG.png" class="w3-round" alt="Random Name"
+                                style="width:60%">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div>
-                <table class="simpleTable">
-                    <tr>
-                        <th>About Me</th>
-                    </tr>
-                    <tr>
-                        <td>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <table class="simpleTable">
-            <tr>
-                <th>Footer Links And Stuff</th>
-            </tr>
-            <tr>
-                <td>
-                </td>
-            </tr>
-        </table>
+            <!-- End Page Content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+        </p>
     </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function menuToggle() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 
 </html>
