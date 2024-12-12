@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="scripting.js"></script>
 
 <head>
     <title>Dakota Sheetz Portfolio Project</title>
@@ -61,6 +62,7 @@
                                     <img id="avatarImage" src="assets/images/profile.jpg" style="width:100%" alt="Avatar">
                                 </div>
                             </div>
+                            <br>
                             <div class="w3-container">
                                 <p><i class="fa fa-id-badge fa-fw w3-margin-right w3-large w3-text-teal"></i>Dakota Sheetz</p>
                                 <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Jeannette, PA</p>
@@ -82,6 +84,27 @@
                                 <p>● XML</p>
                                 <p>● API’s</p>
                                 <p>● Node.js</p>
+                                <hr>
+
+                                <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                                <p>● 5+ Years in Customer Service</p>
+                                <p>● Operating System Support</p>
+                                <p>● Conflict Resolution</p>
+                                <p>● Team Building</p>
+                                <p>● Development Lifecycle</p>
+                                <p>● Developing / Implementing Policies</p>
+                                <p>● Object Oriented Programming</p>
+                                <p>● Data Warehouse</p>
+                                <p>● Website & Database Management</p>
+                                <p>● Web Design</p>
+                                <p>● Front & Backend Development</p>
+                                <p>● Agile Development</p>
+                                <p>● IT Development</p>
+                                <p>● Lifecycle Management</p>
+                                <p>● Printer Care & Repair</p>
+                                <p>● Visual Studio Support</p>
+                                <p>● Sharepoint Support</p>
+                                <p>● User Interfaces [UI]</p>
                             </div>
                             <br>
                         </div><br>
@@ -139,8 +162,7 @@
                         </div>
 
                         <div class="w3-container w3-card w3-white">
-                            <h2 class="w3-text-grey w3-padding-16"><i
-                                    class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education
+                            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education
                             </h2>
                             <div class="w3-container">
                                 <h4 class="w3-opacity"><b>Edinboro University, Edinboro PA</b></h4>
@@ -167,20 +189,51 @@
                 <div class="w3-container w3-card w3-white">
                     <h2 class="w3-wide">HTML, CSS & Javascript Projects</h2>
                     <div class="w3-row w3-padding-32">
-                        <div class="w3-third">
-                            <p>Name</p>
-                            <img src="assets/svg/ImagePlaceholderPNG.png" class="w3-round w3-margin-bottom"
-                                alt="Random Name" style="width:60%">
-                        </div>
-                        <div class="w3-third">
-                            <p>Name</p>
-                            <img src="assets/svg/ImagePlaceholderPNG.png" class="w3-round w3-margin-bottom"
-                                alt="Random Name" style="width:60%">
-                        </div>
-                        <div class="w3-third">
-                            <p>Name</p>
-                            <img src="assets/svg/ImagePlaceholderPNG.png" class="w3-round" alt="Random Name"
-                                style="width:60%">
+                        <h6><b>Logic Gates</b></h6>
+                        <p>Simple Logic Gate Program check the boxes to turn on the red light to green via different gates</p>
+                        <div class="projectContainer">
+                            <table>
+                                <tr>
+                                    <th style="padding: 5px;">A</th>
+                                    <th style="padding: 5px;">B</th>
+                                    <th style="padding: 5px;">GATE</th>
+                                    <th style="padding: 5px;">RESULT</th>
+                                </tr>
+                                <tr>
+                                    <td> 
+                                        <label class="container">
+                                            <input type="checkbox" id="INPUT_1" onchange="RunLogicGate()">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="container">
+                                            <input type="checkbox" id="INPUT_2" onchange="RunLogicGate()">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <select id="GATE_1" onchange="RunLogicGate()">
+                                            <option value="OPEN">OPEN</option>
+                                            <option value="AND">AND</option>
+                                            <option value="OR">OR</option>
+                                            <option value="XOR">XOR</option>
+                                            <option value="NOT">NOT</option>
+                                            <option value="NAND">NAND</option>
+                                            <option value="NOR">NOR</option>
+                                            <option value="XNOR">XNOR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div id="redLight">
+                                            <i class="fa fa-lightbulb-o" style="font-size:48px;color:red"></i>
+                                        </div>
+                                        <div id="greenLight" hidden>
+                                            <i class="fa fa-lightbulb-o" style="font-size:48px;color:green" ></i>
+                                        </div>
+                                        <!--<input id="OUTPUT_1">-->                                    </td>
+                                </tr>
+                            </table> 
                         </div>
                     </div>
                 </div>
@@ -219,7 +272,6 @@
             }
         }
     </script>
-
 </body>
-
 </html>
+  
