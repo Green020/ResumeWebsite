@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="scripting.js"></script>
-
 <head>
     <title>Dakota Sheetz Portfolio Project</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,8 +32,8 @@
                     class="fa fa-bars"></i></a>
             <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
             <a href="#SimpleWebProjects" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HTML, CSS & Javascript Projects</a>
-            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT TWO</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT THREE</a>
+            <!-- <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT TWO</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT THREE</a> -->
             <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
                     class="fa fa-search"></i></a>
         </div>
@@ -43,8 +42,8 @@
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
         <a href="#SimpleWebProjects" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">HTML, CSS & Javascript Projects</a>
-        <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">PROJECT TWO</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">PROJECT THREE</a>
+        <!-- <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">PROJECT TWO</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">PROJECT THREE</a -->>
     </div>
 
     <!-- Page content -->
@@ -194,46 +193,66 @@
                         <div class="projectContainer">
                             <table>
                                 <tr>
-                                    <th style="padding: 5px;">A</th>
-                                    <th style="padding: 5px;">B</th>
-                                    <th style="padding: 5px;">GATE</th>
-                                    <th style="padding: 5px;">RESULT</th>
-                                </tr>
-                                <tr>
                                     <td> 
+                                        <b>A</b>
                                         <label class="container">
                                             <input type="checkbox" id="INPUT_1" onchange="RunLogicGate()">
                                             <span class="checkmark"></span>
                                         </label>
                                     </td>
                                     <td>
+                                        <b>B</b>
                                         <label class="container">
                                             <input type="checkbox" id="INPUT_2" onchange="RunLogicGate()">
                                             <span class="checkmark"></span>
                                         </label>
                                     </td>
                                     <td>
-                                        <select id="GATE_1" onchange="RunLogicGate()">
-                                            <option value="OPEN">OPEN</option>
-                                            <option value="AND">AND</option>
-                                            <option value="OR">OR</option>
-                                            <option value="XOR">XOR</option>
-                                            <option value="NOT">NOT</option>
-                                            <option value="NAND">NAND</option>
-                                            <option value="NOR">NOR</option>
-                                            <option value="XNOR">XNOR</option>
-                                        </select>
+                                        <label class="container"><b>Logic Gate</b>
+                                            <select id="GATE_1" onchange="RunLogicGate()">
+                                                <option value="OPEN">OPEN</option>
+                                                <option value="AND">AND</option>
+                                                <option value="OR">OR</option>
+                                                <option value="XOR">XOR</option>
+                                                <option value="NOT">NOT</option>
+                                                <option value="NAND">NAND</option>
+                                                <option value="NOR">NOR</option>
+                                                <option value="XNOR">XNOR</option>
+                                                <option value="CLOSED">CLOSED</option>
+                                            </select>
+                                        </label>
                                     </td>
-                                    <td>
+                                    <td style="padding-left: 15px;">
                                         <div id="redLight">
-                                            <i class="fa fa-lightbulb-o" style="font-size:48px;color:red"></i>
+                                            <i class="fa fa-lightbulb-o" style="font-size:120px;color:red"></i>
                                         </div>
                                         <div id="greenLight" hidden>
-                                            <i class="fa fa-lightbulb-o" style="font-size:48px;color:green" ></i>
+                                            <i class="fa fa-lightbulb-o" style="font-size:120px;color:green" ></i>
                                         </div>
                                         <!--<input id="OUTPUT_1">-->                                    </td>
                                 </tr>
                             </table> 
+                        </div>
+                    </div>
+                    <div class="w3-row w3-padding-32">
+                        <h6><b>Tic Tac Toe</b></h6>
+                        <p>Simple Tic Tac Toe Game</p>
+                        <div class="projectContainer">
+                            <section>
+                                <div class="gameGrid">
+                                    <div data-cell-index="0" class="cell"></div>
+                                    <div data-cell-index="1" class="cell"></div>
+                                    <div data-cell-index="2" class="cell"></div>
+                                    <div data-cell-index="3" class="cell"></div>
+                                    <div data-cell-index="4" class="cell"></div>
+                                    <div data-cell-index="5" class="cell"></div>
+                                    <div data-cell-index="6" class="cell"></div>
+                                    <div data-cell-index="7" class="cell"></div>
+                                    <div data-cell-index="8" class="cell"></div>
+                                </div>
+                                <h6 class="status">Game Start</h6>
+                                <button class="restartBTN">Restart Game</button>
+                            </section>
                         </div>
                     </div>
                 </div>
@@ -253,17 +272,7 @@
         </p>
     </footer>
 
-    <script>
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function menuToggle() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-
+    <script src="scripting.js">
         // When the user clicks anywhere outside of the modal, close it
         var modal = document.getElementById('ticketModal');
         window.onclick = function (event) {
