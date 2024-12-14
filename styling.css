@@ -38,7 +38,7 @@ nav ul li a {
     color: white;
     font-size: 17px;
     text-transform: uppercase;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 a.active,
@@ -113,7 +113,7 @@ a:hover {
     min-width: 600px;
     max-width: 600px;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: #FFFF8A;
     color: black;
     text-align: center;
@@ -121,7 +121,7 @@ a:hover {
 }
 
 .closebtn {
-    margin-left: 15px;
+    margin-left: 5px;
     color: black;
     font-weight: bold;
     float: right;
@@ -183,23 +183,21 @@ a:hover {
 
 .avatarImageCard img {
     padding: 2px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .projectContainer {
-    padding: 2px;
-    border: #0B2B26 dashed;
-    border-radius: 15px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 2px;
+    border-radius: 5px;
+    border: #0B2B26 dashed;
 }
 
 .baseBTN {
     appearance: none;
     background-color: #0B2B26;
     border: 1px solid rgba(27, 31, 35, .15);
-    border-radius: 6px;
+    border-radius: 5px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
     box-sizing: border-box;
     color: #fff;
@@ -452,9 +450,17 @@ select:focus {
     background: white;
 }
 
+.logicGateContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ----- Tic Tac Toe ----- */
-.game--title {
-    padding-top: 20px;
+.tictactoeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gameGrid {
@@ -481,7 +487,7 @@ select:focus {
     appearance: none;
     background-color: #0B2B26;
     border: 1px solid rgba(27, 31, 35, .15);
-    border-radius: 6px;
+    border-radius: 5px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
     box-sizing: border-box;
     color: #fff;
@@ -526,26 +532,28 @@ select:focus {
 
 /* ----- Maze ----- */
 
+.mazeContainer_columns{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 40% 60%;
+}
+
+.mazeContainer_rows{
+    display: grid;
+    align-items: center;
+    grid-template-rows: 50% 50%;}
+
 #mazeCanvas {
     background-color: #7FA347;
     border: 5px solid #4E6227;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-.msgbox {
-    border-radius: 15px;
+.msgBox {
+    border-radius: 5px;
     text-align: center;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
-
-.msgbox h1 {
-    color: #FFD700;
-    margin-top: 20px;
-}
-
-.msgbox h2 {
-    color: #ffffff;
-    margin-top: 10px;
 }
 
 .restartMazeBTN {

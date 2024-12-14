@@ -192,104 +192,113 @@
                         <h6><b>Logic Gates</b></h6>
                         <p>Simple Logic Gate Program check the boxes to turn on the red light to green via different gates</p>
                         <div class="projectContainer">
-                            <table>
-                                <tr>
-                                    <td> 
-                                        <b>A</b>
-                                        <label class="container">
-                                            <input type="checkbox" id="INPUT_1" onchange="RunLogicGate()">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <b>B</b>
-                                        <label class="container">
-                                            <input type="checkbox" id="INPUT_2" onchange="RunLogicGate()">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <label class="container"><b>Logic Gate</b>
-                                            <select id="GATE_1" onchange="RunLogicGate()">
-                                                <option value="OPEN">OPEN</option>
-                                                <option value="AND">AND</option>
-                                                <option value="OR">OR</option>
-                                                <option value="XOR">XOR</option>
-                                                <option value="NOT">NOT</option>
-                                                <option value="NAND">NAND</option>
-                                                <option value="NOR">NOR</option>
-                                                <option value="XNOR">XNOR</option>
-                                                <option value="CLOSED">CLOSED</option>
-                                            </select>
-                                        </label>
-                                    </td>
-                                    <td style="padding-left: 15px;">
-                                        <div id="redLight">
-                                            <i class="fa fa-lightbulb-o" style="font-size:120px;color:red"></i>
-                                        </div>
-                                        <div id="greenLight" hidden>
-                                            <i class="fa fa-lightbulb-o" style="font-size:120px;color:green" ></i>
-                                        </div>
-                                        <!--<input id="OUTPUT_1">-->                                    </td>
-                                </tr>
-                            </table> 
+                            <div class="logicGateContainer">
+                                <table>
+                                    <tr>
+                                        <td> 
+                                            <b>A</b>
+                                            <label class="container">
+                                                <input type="checkbox" id="INPUT_1" onchange="RunLogicGate()">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <b>B</b>
+                                            <label class="container">
+                                                <input type="checkbox" id="INPUT_2" onchange="RunLogicGate()">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="container"><b>Logic Gate</b>
+                                                <select id="GATE_1" onchange="RunLogicGate()">
+                                                    <option value="OPEN">OPEN</option>
+                                                    <option value="AND">AND</option>
+                                                    <option value="OR">OR</option>
+                                                    <option value="XOR">XOR</option>
+                                                    <option value="NOT">NOT</option>
+                                                    <option value="NAND">NAND</option>
+                                                    <option value="NOR">NOR</option>
+                                                    <option value="XNOR">XNOR</option>
+                                                    <option value="CLOSED">CLOSED</option>
+                                                </select>
+                                            </label>
+                                        </td>
+                                        <td style="padding-left: 15px;">
+                                            <div id="redLight">
+                                                <i class="fa fa-lightbulb-o" style="font-size:120px;color:red"></i>
+                                            </div>
+                                            <div id="greenLight" hidden>
+                                                <i class="fa fa-lightbulb-o" style="font-size:120px;color:green" ></i>
+                                            </div>
+                                            <!--<input id="OUTPUT_1">-->                                    </td>
+                                    </tr>
+                                </table> 
+                            </div>
                         </div>
                     </div>
                     <hr>
                     <div class="w3-row w3-padding-32">
                         <h6><b>Tic Tac Toe</b></h6>
                         <div class="projectContainer">
-                            <section>
-                                <div class="gameGrid">
-                                    <div data-cell-index="0" class="cell"></div>
-                                    <div data-cell-index="1" class="cell"></div>
-                                    <div data-cell-index="2" class="cell"></div>
-                                    <div data-cell-index="3" class="cell"></div>
-                                    <div data-cell-index="4" class="cell"></div>
-                                    <div data-cell-index="5" class="cell"></div>
-                                    <div data-cell-index="6" class="cell"></div>
-                                    <div data-cell-index="7" class="cell"></div>
-                                    <div data-cell-index="8" class="cell"></div>
-                                </div>
-                                <h6 class="status">Game Start</h6>
-                                <button class="restartBTN">Restart Game</button>
-                            </section>
+                            <div class="tictactoeContainer">
+                                <section>
+                                    <div class="gameGrid">
+                                        <div data-cell-index="0" class="cell"></div>
+                                        <div data-cell-index="1" class="cell"></div>
+                                        <div data-cell-index="2" class="cell"></div>
+                                        <div data-cell-index="3" class="cell"></div>
+                                        <div data-cell-index="4" class="cell"></div>
+                                        <div data-cell-index="5" class="cell"></div>
+                                        <div data-cell-index="6" class="cell"></div>
+                                        <div data-cell-index="7" class="cell"></div>
+                                        <div data-cell-index="8" class="cell"></div>
+                                    </div>
+                                    <h6 class="status">Game Start</h6>
+                                    <button class="restartBTN">Restart Game</button>
+                                </section>
+                            </div>
+
                         </div>
                     </div>
                     <hr>
                     <div class="w3-row w3-padding-32">
                         <h6><b>Escape the Labyrinth!</b></h6>
                         <div class="projectContainer">
-                            <table>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <button id="btnUp" class="mazeBTN">Up</button>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="btnLeft" class="mazeBTN">Left</button>
-                                    </td>
-                                    <td>
-                                        <button class="restartMazeBTN">New Game</button>
-                                    </td>
-                                    <td>
-                                        <button id="btnRight" class="mazeBTN">Right</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <button id="btnDown" class="mazeBTN">Down</button>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                            <div class="msgbox"></div>
-                            <!-- TODO: Fix Height And Width To Be Adjustable -->
-                            <canvas id="mazeCanvas" height="400px" width="400px"> </canvas>
+                            <div class="mazeContainer_columns">
+                                <div class="mazeContainer_rows">
+                                    <div id="mazeMessageBox" class="msgBox"></div>
+                                    <table style="padding-right: 15px;">
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <button id="btnUp" class="mazeBTN">Up</button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button id="btnLeft" class="mazeBTN">Left</button>
+                                            </td>
+                                            <td>
+                                                <button class="restartMazeBTN" onclick="RestartMaze()">New Game</button>
+                                            </td>
+                                            <td>
+                                                <button id="btnRight" class="mazeBTN">Right</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <button id="btnDown" class="mazeBTN">Down</button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- TODO: Fix Height And Width To Be Adjustable -->
+                                 <div><canvas id="mazeCanvas" height="400px" width="400px"> </canvas></div>    
+                            </div>
                         </div>
                     </div>
                 </div>

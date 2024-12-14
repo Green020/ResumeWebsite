@@ -7,7 +7,7 @@ const width = canvas.width;
 const height = canvas.height;
 
 //Recode to Set Difficulty
-let cellSize = 100;
+let cellSize = 50;
 
 const playerRadius = cellSize / 2 - 5;
 const endRadius = cellSize / 2 - 5;
@@ -23,14 +23,18 @@ const rows = Math.floor(height / cellSize);
 const playerIcon = { x: 0,y: 0, color: 'red'};
 const end = { x: cols - 1, y: rows - 1, color: 'blue'};
 
-document.querySelector('.restartMazeBTN').addEventListener('click', function () {
+const messageBox = document.getElementById('mazeMessageBox');
+messageBox.innerHTML = "<h4>Complete The Maze To Win The Game!</h4>";
+
+function RestartMaze(){
     ResetPlayerPos();
     ClearScreen();
     SetupMaze();
     DrawMaze();
     AddListener();
-    DisplayHidden();
-});
+
+    messageBox.innerHTML = "<h4>Complete The Maze To Win The Game!</h4>";
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   const restartMazeBTN = document.querySelector('.restartMazeBTN');
@@ -93,15 +97,13 @@ function MovePlayer(key, player) {
     }
 
     if (player.x == cols - 1 && player.y == rows - 1) {
+
       /* Remove And Add Winning Message */
-      
-      const messageBox = document.getElementById('msgBox');
-      messageBox.innerHTML = "<h1>You Won!</h1>";
-      messageBox.innerHTML += "<h2 id='moves'>Moves</h2>";
-      document.getElementById('moves').innerHTML = "Moves:" + points;
+      const messageBox = document.getElementById('mazeMessageBox');
+      messageBox.innerHTML = "<h4>You Escaped! Press New Game To Try Again!</h4>";
+      messageBox.innerHTML += "<h6 id='moves'>Moves</h6>";
+      document.getElementById('moves').innerHTML = "Moves Taken To Win: " + points;
       messageBox.style.fontSize = "1em"
-      messageBox.style.color = "black";
-      messageBox.style.visibility = "visible";
     }
 }
 
