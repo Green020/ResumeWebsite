@@ -187,6 +187,7 @@
             <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="SimpleWebProjects">
                 <div class="w3-container w3-card w3-white">
                     <h2 class="w3-wide">HTML, CSS & Javascript Projects</h2>
+                    <hr>
                     <div class="w3-row w3-padding-32">
                         <h6><b>Logic Gates</b></h6>
                         <p>Simple Logic Gate Program check the boxes to turn on the red light to green via different gates</p>
@@ -234,9 +235,9 @@
                             </table> 
                         </div>
                     </div>
+                    <hr>
                     <div class="w3-row w3-padding-32">
                         <h6><b>Tic Tac Toe</b></h6>
-                        <p>Simple Tic Tac Toe Game</p>
                         <div class="projectContainer">
                             <section>
                                 <div class="gameGrid">
@@ -253,6 +254,42 @@
                                 <h6 class="status">Game Start</h6>
                                 <button class="restartBTN">Restart Game</button>
                             </section>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="w3-row w3-padding-32">
+                        <h6><b>Escape the Labyrinth!</b></h6>
+                        <div class="projectContainer">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <button id="btnUp" class="mazeBTN">Up</button>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button id="btnLeft" class="mazeBTN">Left</button>
+                                    </td>
+                                    <td>
+                                        <button class="restartMazeBTN">New Game</button>
+                                    </td>
+                                    <td>
+                                        <button id="btnRight" class="mazeBTN">Right</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <button id="btnDown" class="mazeBTN">Down</button>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div class="msgbox"></div>
+                            <!-- TODO: Fix Height And Width To Be Adjustable -->
+                            <canvas id="mazeCanvas" height="400px" width="400px"> </canvas>
                         </div>
                     </div>
                 </div>
@@ -272,6 +309,8 @@
         </p>
     </footer>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="scripting.js">
         // When the user clicks anywhere outside of the modal, close it
         var modal = document.getElementById('ticketModal');
