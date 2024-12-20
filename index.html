@@ -1,68 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <title>Dakota Sheetz Portfolio Project</title>
+
+    <title>Green Website Portfolio</title>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <!-- Error Message Box -->
-    <div id="messageBoxOverlay" class="overlayBox">
-        <div id="messageMSGBox" class="alertBox">
-            <span id="messageMSG">NO MESSAGE SET</span>
-            <br>
-            <div style="padding-top: 15px;">
-                <label for="closeMessageMSG" class="baseBTN">Close Message</label>
-                <input id="closeMessageMSG" type="button" onclick="CloseMessage()" style="display: none;">
-            </div>
+<!-- Error Message Box -->
+<div id="messageBoxOverlay" class="overlayBox">
+    <div id="messageMSGBox" class="alertBox">
+        <span id="messageMSG">NO MESSAGE SET</span>
+        <br>
+        <div style="padding-top: 15px;">
+            <label for="closeMessageMSG" class="baseBTN">Close Message</label>
+            <input id="closeMessageMSG" type="button" onclick="CloseMessage()" style="display: none;">
         </div>
     </div>
+</div>
+
+<body id="myPage">
+    <!-- Sidebar on click -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2"
+        id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+            <i class="fa fa-remove"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button">Link 4</a>
+        <a href="#" class="w3-bar-item w3-button">Link 5</a>
+    </nav>
 
     <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-bar w3-black w3-card">
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0)" onclick="menuToggle()" title="Toggle Navigation Menu"><i
-                    class="fa fa-bars"></i></a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-            <a href="#SimpleWebProjects" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HTML, CSS & Javascript Projects</a>
-            <!-- <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT TWO</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT THREE</a> -->
+        <div class="w3-bar w3-theme-d2 w3-left-align">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+                href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+            <a href="#services" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Services</a>
+            <a href="#projects" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projects</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button">Link</a>
+                    <a href="#" class="w3-bar-item w3-button">Link</a>
+                    <a href="#" class="w3-bar-item w3-button">Link</a>
+                </div>
+            </div>
+            <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a> -->
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+            <a href="#team" class="w3-bar-item w3-button">Team</a>
+            <a href="#services" class="w3-bar-item w3-button">Services</a>
+            <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+            <!-- <a href="#" class="w3-bar-item w3-button">Search</a> -->
         </div>
     </div>
 
-    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="#SimpleWebProjects" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">HTML, CSS & Javascript Projects</a>
-        <!-- <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">PROJECT TWO</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="menuToggle()">PROJECT THREE</a -->>
-    </div>
-
-    <!-- Page content -->
-    <div class="w3-content" style="max-width:2000px;margin-top:150px">
-        <body class="w3-light-grey">
+    <!-- Header -->
+    <div class="w3-display-container w3-animate-opacity">
+        <div class="w3-content" style="max-width:2000px;margin-top: 5%">
             <!-- Page Container -->
-            <div class="w3-content w3-margin-top" style="max-width:1400px;">
+            <div class="w3-content w3-margin-top" style="max-width: 95%;">
                 <!-- The Grid -->
                 <div class="w3-row-padding">
                     <!-- Left Column -->
-                    <div class="w3-third">
+                    <div class="w3-quarter">
                         <div class="w3-white w3-text-grey w3-card-4">
                             <div class="w3-display-container">
                                 <div class="avatarImageCard">
-                                    <img id="avatarImage" src="assets/images/profile.jpg" style="width:100%" alt="Avatar">
+                                    <img id="avatarImage" src="assets/images/AvatarThree.jpg" style="width:100%"
+                                        alt="Avatar">
                                 </div>
                             </div>
                             <br>
                             <div class="w3-container">
                                 <p><i class="fa fa-id-badge fa-fw w3-margin-right w3-large w3-text-teal"></i>Dakota Sheetz</p>
-                                <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Jeannette, PA</p>
+                                <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Jeannette, PA </p>
                                 <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:dsheetz020@gmail.com">Email Me</a></p>
                                 <p><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://github.com/Green020">GitHub Link</a></p>
                                 <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(724) 691-2176</p>
@@ -81,27 +108,6 @@
                                 <p>● XML</p>
                                 <p>● API’s</p>
                                 <p>● Node.js</p>
-                                <hr>
-
-                                <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-                                <p>● 5+ Years in Customer Service</p>
-                                <p>● Operating System Support</p>
-                                <p>● Conflict Resolution</p>
-                                <p>● Team Building</p>
-                                <p>● Development Lifecycle</p>
-                                <p>● Developing / Implementing Policies</p>
-                                <p>● Object Oriented Programming</p>
-                                <p>● Data Warehouse</p>
-                                <p>● Website & Database Management</p>
-                                <p>● Web Design</p>
-                                <p>● Front & Backend Development</p>
-                                <p>● Agile Development</p>
-                                <p>● IT Development</p>
-                                <p>● Lifecycle Management</p>
-                                <p>● Printer Care & Repair</p>
-                                <p>● Visual Studio Support</p>
-                                <p>● Sharepoint Support</p>
-                                <p>● User Interfaces [UI]</p>
                             </div>
                             <br>
                         </div><br>
@@ -110,7 +116,7 @@
                     </div>
 
                     <!-- Right Column -->
-                    <div class="w3-twothird">
+                    <div class="w3-threequarter">
                         <div class="w3-container w3-card w3-white w3-margin-bottom">
                             <h2 class="w3-text-grey w3-padding-16"><i
                                     class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
@@ -136,7 +142,8 @@
                                 <h4 class="w3-opacity"><b>Best Buy</b></h4>
                                 <h5 class="w3-opacity">Monroeville PA - Geek Squad ARA</h5>
                                 <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>NOVEMBER 2020 - FEBRUARY 2021</h6>
-                                <p>Provided support as a base IT support role here while looking to advance my career.</p>
+                                <p>Provided support as a base IT support role here while looking to advance my career.
+                                </p>
                                 <hr>
                             </div>
                             <div class="w3-container">
@@ -158,8 +165,7 @@
                         </div>
 
                         <div class="w3-container w3-card w3-white">
-                            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education
-                            </h2>
+                            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
                             <div class="w3-container">
                                 <h4 class="w3-opacity"><b>Edinboro University, Edinboro PA</b></h4>
                                 <h5 class="w3-opacity">BS Computer Science: Game and Virtual World</h5>
@@ -179,153 +185,230 @@
                 </div>
                 <!-- End Page Container -->
             </div>
+        </div>
 
-            <!-- The HTML CSS & Javascript Section -->
-            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="SimpleWebProjects">
-                <div class="w3-container w3-card w3-white">
-                    <h2 class="w3-wide">HTML, CSS & Javascript Projects</h2>
-                    <hr>
-                    <div class="w3-row w3-padding-32">
-                        <h6><b>Logic Gates</b></h6>
-                        <p>Simple Logic Gate Program check the boxes to turn on the red light to green via different gates</p>
-                        <div class="projectContainer">
-                            <div class="logicGateContainer">
-                                <table>
-                                    <tr>
-                                        <td> 
-                                            <b>A</b>
-                                            <label class="container">
-                                                <input type="checkbox" id="INPUT_1" onchange="RunLogicGate()">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <b>B</b>
-                                            <label class="container">
-                                                <input type="checkbox" id="INPUT_2" onchange="RunLogicGate()">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label class="container"><b>Logic Gate</b>
-                                                <select id="GATE_1" onchange="RunLogicGate()">
-                                                    <option value="OPEN">OPEN</option>
-                                                    <option value="AND">AND</option>
-                                                    <option value="OR">OR</option>
-                                                    <option value="XOR">XOR</option>
-                                                    <option value="NOT">NOT</option>
-                                                    <option value="NAND">NAND</option>
-                                                    <option value="NOR">NOR</option>
-                                                    <option value="XNOR">XNOR</option>
-                                                    <option value="CLOSED">CLOSED</option>
-                                                </select>
-                                            </label>
-                                        </td>
-                                        <td style="padding-left: 15px;">
-                                            <div id="redLight">
-                                                <i class="fa fa-lightbulb-o" style="font-size:120px;color:red"></i>
-                                            </div>
-                                            <div id="greenLight" hidden>
-                                                <i class="fa fa-lightbulb-o" style="font-size:120px;color:green" ></i>
-                                            </div>
-                                            <!--<input id="OUTPUT_1">-->                                    </td>
-                                    </tr>
-                                </table> 
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="w3-row w3-padding-32">
-                        <h6><b>Tic Tac Toe</b></h6>
-                        <div class="projectContainer">
-                            <div class="tictactoeContainer">
-                                <section>
-                                    <div class="gameGrid">
-                                        <div data-cell-index="0" class="cell"></div>
-                                        <div data-cell-index="1" class="cell"></div>
-                                        <div data-cell-index="2" class="cell"></div>
-                                        <div data-cell-index="3" class="cell"></div>
-                                        <div data-cell-index="4" class="cell"></div>
-                                        <div data-cell-index="5" class="cell"></div>
-                                        <div data-cell-index="6" class="cell"></div>
-                                        <div data-cell-index="7" class="cell"></div>
-                                        <div data-cell-index="8" class="cell"></div>
-                                    </div>
-                                    <h6 class="status">Game Start</h6>
-                                    <button class="restartBTN">Restart Game</button>
-                                </section>
-                            </div>
+        <!-- Modal -->
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-teal w3-display-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+                    <h4>Oh snap! We just showed you a modal..</h4>
+                    <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+                </header>
+                <div class="w3-container">
+                    <p>Cool huh? Ok, enough teasing around..</p>
+                    <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!
+                    </p>
+                </div>
+                <footer class="w3-container w3-teal">
+                    <p>Modal footer</p>
+                </footer>
+            </div>
+        </div>
 
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="w3-row w3-padding-32">
-                        <h6><b>Escape the Labyrinth!</b></h6>
-                        <div class="projectContainer">
-                            <div class="mazeContainer_columns">
-                                <div class="mazeContainer_rows">
-                                    <div id="mazeMessageBox" class="msgBox"></div>
-                                    <table style="padding-right: 15px;">
-                                        <tr>
-                                            <td></td>
-                                            <td>
-                                                <button id="btnUp" class="mazeBTN">Up</button>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button id="btnLeft" class="mazeBTN">Left</button>
-                                            </td>
-                                            <td>
-                                                <button class="restartMazeBTN" onclick="RestartMaze()">New Game</button>
-                                            </td>
-                                            <td>
-                                                <button id="btnRight" class="mazeBTN">Right</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>
-                                                <button id="btnDown" class="mazeBTN">Down</button>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <!-- TODO: Fix Height And Width To Be Adjustable -->
-                                 <div><canvas id="mazeCanvas" height="400px" width="400px"> </canvas></div>    
-                            </div>
-                        </div>
+        <!-- Team Container -->
+<!--         <div class="w3-container w3-padding-64 w3-center" id="team">
+            <h2>OUR TEAM</h2>
+            <p>Meet the team - our office rats:</p>
+
+            <div class="w3-row"><br>
+                <div class="w3-quarter">
+                    <img src="assets/svg/ImagePlaceholderPNG.png" alt="Boss" style="width:45%"
+                        class="w3-circle w3-hover-opacity">
+                    <h3>Johnny Walker</h3>
+                    <p>Web Designer</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="assets/svg/ImagePlaceholderPNG.png" alt="Boss" style="width:45%"
+                        class="w3-circle w3-hover-opacity">
+                    <h3>Rebecca Flex</h3>
+                    <p>Support</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="assets/svg/ImagePlaceholderPNG.png" alt="Boss" style="width:45%"
+                        class="w3-circle w3-hover-opacity">
+                    <h3>Jan Ringo</h3>
+                    <p>Boss man</p>
+                </div>
+
+                <div class="w3-quarter">
+                    <img src="assets/svg/ImagePlaceholderPNG.png" alt="Boss" style="width:45%"
+                        class="w3-circle w3-hover-opacity">
+                    <h3>Kai Ringo</h3>
+                    <p>Fixer</p>
+                </div>
+
+            </div>
+        </div> -->
+
+        <!-- Services Row -->
+        <div class="w3-row-padding w3-center w3-padding-64" id="services">
+            <h2>Services</h2>
+            <p>Short Description</p><br>
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-hover-shadow">
+                    <li class="w3-theme"> <p class="w3-xlarge">Website Design & Development</p> </li>
+                    <li class="w3-padding-16">Descr</li>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-hover-shadow">
+                    <li class="w3-theme"> <p class="w3-xlarge">Front-end Development</p> </li>
+                    <li class="w3-padding-16">Descr</li>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-hover-shadow">
+                    <li class="w3-theme"> <p class="w3-xlarge">Back-end Development</p> </li>
+                    <li class="w3-padding-16">Descr</li>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-hover-shadow">
+                    <li class="w3-theme"><p class="w3-xlarge">Data Analytics</p></li>
+                    <li class="w3-padding-16">Descr</li>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-hover-shadow">
+                    <li class="w3-theme"> <p class="w3-xlarge">Object Oriented Programs</p> </li>
+                    <li class="w3-padding-16">Descr</li>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-hover-shadow">
+                    <li class="w3-theme"> <p class="w3-xlarge">Game Design & Development</p> </li>
+                    <li class="w3-padding-16">Descr</li>
+            </div>
+        </div>
+
+        <!-- Projects Row -->
+        <div class="w3-row-padding w3-padding-64" id="projects">
+
+
+            <div class="w3-display-container">
+                <h2>My Work</h2>
+                <p>Below are a few of my favorite projects that I have worked on over the years.</p>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card w3-white">
+                    <img src="assets/svg/ImagePlaceholderPNG.png" alt="Snow" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Customer 1</h3>
+                        <h4>Trade</h4>
+                        <p>Blablabla</p>
+                        <button class="w3-button w3-teal w3-padding-large"> Sign Up </button>
                     </div>
                 </div>
             </div>
-            <!-- End Page Content -->
-    </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-        <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-        </p>
-    </footer>
+            <div class="w3-quarter">
+                <div class="w3-card w3-white">
+                    <img src="assets/svg/ImagePlaceholderPNG.png" alt="Lights" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Customer 2</h3>
+                        <h4>Trade</h4>
+                        <p>Blablabla</p>
+                    </div>
+                </div>
+            </div>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-    <script src="scripting.js">
-        // When the user clicks anywhere outside of the modal, close it
-        var modal = document.getElementById('ticketModal');
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+            <div class="w3-quarter">
+                <div class="w3-card w3-white">
+                    <img src="assets/svg/ImagePlaceholderPNG.png" alt="Mountains" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Customer 3</h3>
+                        <h4>Trade</h4>
+                        <p>Blablabla</p>
+                        <button class="w3-button w3-teal w3-padding-large"> Sign Up </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card w3-white">
+                    <img src="assets/svg/ImagePlaceholderPNG.png" alt="Mountains" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Customer 3</h3>
+                        <h4>Trade</h4>
+                        <p>Blablabla</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container -->
+        <div class="w3-container" style="position:relative">
+            <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+                style="position:absolute;top:-28px;right:24px">+</a>
+        </div>
+
+        <!-- Contact Container -->
+        <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+            <div class="w3-row">
+                <div class="w3-col m5">
+                    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span>
+                    </div>
+                    <h3>Address</h3>
+                    <p>Swing by for a cup of coffee, or whatever.</p>
+                    <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
+                    <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
+                    <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
+                </div>
+                <div class="w3-col m7">
+                    <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php"
+                        target="_blank">
+                        <div class="w3-section">
+                            <label>Name</label>
+                            <input class="w3-input" type="text" name="Name" required>
+                        </div>
+                        <div class="w3-section">
+                            <label>Email</label>
+                            <input class="w3-input" type="text" name="Email" required>
+                        </div>
+                        <div class="w3-section">
+                            <label>Message</label>
+                            <input class="w3-input" type="text" name="Message" required>
+                        </div>
+                        <input class="w3-check" type="checkbox" checked name="Like">
+                        <label>I Like it!</label>
+                        <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image of location/map -->
+        <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+            <h4>Follow Us</h4>
+            <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i
+                    class="fa fa-facebook"></i></a>
+            <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i
+                    class="fa fa-twitter"></i></a>
+            <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+                    class="fa fa-google-plus"></i></a>
+            <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+                    class="fa fa-instagram"></i></a>
+            <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i
+                    class="fa fa-linkedin"></i></a>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+            <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+                <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+                <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+                        <i class="fa fa-chevron-circle-up"></i></span></a>
+            </div>
+        </footer>
+
+        <script src="script.js">
+        </script>
+
 </body>
+
 </html>
-  
