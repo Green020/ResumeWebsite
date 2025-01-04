@@ -1,0 +1,231 @@
+.custom-select {
+    position: relative;
+    width: 50%;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    background-color: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+select:hover {
+    background-color: #e0e0e0;
+}
+
+select:focus {
+    background: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+}
+
+.custom_input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.inputStyling {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 5px 5px 5px 5px;
+    background-color: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputStyling:focus {
+    background: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+}
+
+.inputStyling::placeholder {
+    color: #9F9FAC;
+}
+
+.inputStyling_Two {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 5px 5px 5px 5px;
+    background-color: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputStyling_Two:focus {
+    background: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+}
+
+.inputStyling_Two::placeholder {
+    color: #9F9FAC;
+}
+
+.inputStyling_Three {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 5px 5px 5px 5px;
+    background-color: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputStyling_Three:focus {
+    background: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+}
+
+.inputStyling_Three::placeholder {
+    color: #9F9FAC;
+}
+
+.textBoxStyle_One {
+    padding: 0;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.textBoxStyle_Two {
+    padding: 0;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.textAreaStyle_One {
+    resize: vertical;
+    min-height: 50px;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 5px 5px 5px 5px;
+    background-color: #E5E5F7;
+    border: 3px dashed #8EB69B;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ----- Check Box ----- */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.logicGateContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----- Unused Items ----- */
+/* Checker Print
+        opacity: 0.4;
+        background-color: #FEABAB;
+        background-image: repeating-linear-gradient(45deg, #FEABAB 25%, transparent 25%, transparent 75%, #FEABAB 75%, #FEABAB),
+                            repeating-linear-gradient(45deg, #FEABAB 25%, #e5e5f7 25%, #e5e5f7 75%, #FEABAB 75%, #FEABAB);
+        background-position: 0 0, 10px 10px;
+        background-size: 20px 20px;*/
+
+/* Zig Zag
+        background-color: #e5e5f7;
+        background: linear-gradient(135deg, #FAEAEB 25%, transparent 25%) -4px 0/ 20px 20px, 
+                    linear-gradient(225deg, #FAD6D6 25%, transparent 25%) -4px 0/ 20px 20px, 
+                    linear-gradient(315deg, #FAEAEB 25%, transparent 25%) 0px 0/ 20px 20px, 
+                    linear-gradient(45deg, #FAD6D6 25%, #e5e5f7 25%) 0px 0/ 20px 20px;*/

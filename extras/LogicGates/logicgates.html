@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dakota Sheetz Portfolio Project</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="logicgates.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <b>A</b>
+                <label class="container">
+                    <input type="checkbox" id="INPUT_1" onchange="RunLogicGate()">
+                    <span class="checkmark"></span>
+                </label>
+            </td>
+            <td>
+                <b>B</b>
+                <label class="container">
+                    <input type="checkbox" id="INPUT_2" onchange="RunLogicGate()">
+                    <span class="checkmark"></span>
+                </label>
+            </td>
+            <td>
+                <label class="container"><b>Gate Type</b>
+                    <select id="GATE_1" onchange="RunLogicGate()">
+                        <option value="OPEN">OPEN</option>
+                        <option value="AND">AND</option>
+                        <option value="OR">OR</option>
+                        <option value="XOR">XOR</option>
+                        <option value="NOT">NOT</option>
+                        <option value="NAND">NAND</option>
+                        <option value="NOR">NOR</option>
+                        <option value="XNOR">XNOR</option>
+                        <option value="CLOSED">CLOSED</option>
+                    </select>
+                </label>
+            </td>
+            <td style="padding-left: 15px;">
+                <div id="redLight">
+                    <i class="fa fa-lightbulb-o" style="font-size:120px;color:red"></i>
+                </div>
+                <div id="greenLight" hidden>
+                    <i class="fa fa-lightbulb-o" style="font-size:120px;color:green"></i>
+                </div>
+                <!--<input id="OUTPUT_1">-->
+            </td>
+        </tr>
+    </table>
+    <script src="logicgates.js"></script>
+</body>
+
+</html>
