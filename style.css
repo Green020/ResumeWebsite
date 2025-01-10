@@ -1,4 +1,9 @@
 /* ----- Containers ----- */
+.projectContainer{
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}
 
 .avatarContainer{
     max-width:500px;
@@ -13,13 +18,6 @@
 .avatarImageCard img {
     padding: 2px;
     border-radius: 5px;
-}
-
-.projectContainer {
-    display: flex;
-    padding: 2px;
-    border-radius: 5px;
-    border: #0B2B26 dashed;
 }
 
 /* ----- Error Box Messaging ----- */

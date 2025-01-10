@@ -1,0 +1,85 @@
+/* ----- Maze ----- */
+
+.projectContainer{
+    margin: auto;
+    padding: 10px;
+}
+
+.mazeContainer_columns{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 40% 60%;
+}
+
+.mazeContainer_rows{
+    display: grid;
+    align-items: center;
+    grid-template-rows: 50% 50%;}
+
+#mazeCanvas {
+    background-color: #7FA347;
+    border: 5px solid #4E6227;
+    border-radius: 5px;
+}
+
+.msgBox {
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.restartMazeBTN {
+    background-color: #af4c91;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.5s ease;
+}
+
+.restartMazeBTN:hover {
+    background-color: #64035f;
+}
+
+.mazeBTN {
+    background-color: #af4c91;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.5s ease;
+}
+
+.mazeBTN:hover {
+    background-color: #64035f;
+}
+
+@keyframes blinkBorder {
+    0%,
+    100% {
+        box-shadow: 0 0 20px #c01826;
+    }
+    50% {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    body {
+        flex-direction: column;
+    }
+
+    #arrowMessage {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .background li {
+        width: 15px;
+        height: 15px;
+    }
+}

@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="logicgates.css">
 
-<head>
-    <title>Dakota Sheetz Portfolio Project</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="logicgates.css">
-</head>
 
-<body>
+<div class="projectContainer">
     <table>
         <tr>
             <td>
@@ -27,7 +22,7 @@
                 </label>
             </td>
             <td>
-                <label class="container"><b>Gate Type</b>
+                <label class="container"><b>Gate</b>
                     <select id="GATE_1" onchange="RunLogicGate()">
                         <option value="OPEN">OPEN</option>
                         <option value="AND">AND</option>
@@ -41,7 +36,7 @@
                     </select>
                 </label>
             </td>
-            <td style="padding-left: 15px;">
+            <td style="width: 100px; padding: 15px;">
                 <div id="redLight">
                     <i class="fa fa-lightbulb-o" style="font-size:120px;color:red"></i>
                 </div>
@@ -52,7 +47,5 @@
             </td>
         </tr>
     </table>
-    <script src="logicgates.js"></script>
-</body>
-
-</html>
+</div>
+<script src="logicgates.js"></script>
