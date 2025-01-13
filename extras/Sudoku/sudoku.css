@@ -1,0 +1,101 @@
+.projectContainer {
+    margin: auto;
+    padding: 15px;
+    padding-top: 25px;
+
+}
+
+.game_columns {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.msgBox {
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5FCFF;
+}
+
+.sudokucontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgray;
+    text-align: center;
+    line-height: 30px;
+    box-sizing: border-box;
+}
+
+.cell:hover {
+    background: rgb(214, 233, 240);
+}
+
+.cell:focus {
+    background: lightblue;
+}
+
+.cell:nth-child(3n):not(:nth-child(9n)) {
+    margin-right: 3px;
+}
+
+.cell:nth-child(27n + 28),
+.cell:nth-child(27n + 29),
+.cell:nth-child(27n + 30),
+.cell:nth-child(27n + 31),
+.cell:nth-child(27n + 32),
+.cell:nth-child(27n + 33),
+.cell:nth-child(27n + 34),
+.cell:nth-child(27n + 35),
+.cell:nth-child(27n + 36) {
+  padding:  3px;
+}
+
+.background_one {
+    background-color: gainsboro;
+}
+
+.background_two {
+    background-color: white;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContainer button {
+    margin-right: 10px;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
