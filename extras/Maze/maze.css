@@ -51,6 +51,7 @@
 }
 
 .mazeBTN {
+    width: 100px;
     background-color: #af4c91;
     color: white;
     padding: 10px 20px;

@@ -24,7 +24,7 @@ const playerIcon = { x: 0,y: 0, color: 'red'};
 const end = { x: cols - 1, y: rows - 1, color: 'blue'};
 
 const messageBox = document.getElementById('mazeMessageBox');
-messageBox.innerHTML = "<h4>Complete The Maze To Win The Game!</h4>";
+messageBox.innerHTML = "<h4 style='color: black; font-weight: bold;'>Complete The Maze To Win The Game!</h4>";
 
 function RestartMaze(){
     ResetPlayerPos();
@@ -33,7 +33,7 @@ function RestartMaze(){
     DrawMaze();
     AddListener();
 
-    messageBox.innerHTML = "<h4>Complete The Maze To Win The Game!</h4>";
+    messageBox.innerHTML = "<h4 style='color: black; font-weight: bold;'>Complete The Maze To Win The Game!</h4>";
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -100,7 +100,7 @@ function MovePlayer(key, player) {
 
       /* Remove And Add Winning Message */
       const messageBox = document.getElementById('mazeMessageBox');
-      messageBox.innerHTML = "<h4>You Escaped! Press New Game To Try Again!</h4>";
+      messageBox.innerHTML = "<h4 style='color: green; font-weight: bold;'>You Escaped! Press New Game To Try Again!</h4>";
       messageBox.innerHTML += "<h6 id='moves'>Moves</h6>";
       document.getElementById('moves').innerHTML = "Moves Taken To Win: " + points;
       messageBox.style.fontSize = "1em"

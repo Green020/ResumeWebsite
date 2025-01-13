@@ -4,9 +4,9 @@ let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage = () => { return `${currentPlayer} has won!`; };
-const drawMessage = () => `TIE`;
-const TurnOrder = () => `${currentPlayer} turn`;
+const winningMessage = () => { return `<h4 style='color: green; font-weight: bold;'>${currentPlayer} HAS WON!</h4>`; };
+const drawMessage = () => `<h4 style='color: red; font-weight: bold;'>YOU TIED!</h4>`;
+const TurnOrder = () => `<h4 style='color: black; font-weight: bold;'>${currentPlayer} TURN</h4>`;
 
 statusDisplay.innerHTML = TurnOrder();
 
