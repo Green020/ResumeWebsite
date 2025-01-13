@@ -1,21 +1,26 @@
 /* ----- Maze ----- */
+.canvasContainer{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
 
 .projectContainer{
     margin: auto;
-    padding: 10px;
+    padding: 15px;
+    padding-top: 25px;
 }
 
 .mazeContainer_columns{
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 40% 60%;
 }
 
 .mazeContainer_rows{
     display: grid;
     align-items: center;
-    grid-template-rows: 50% 50%;}
+}
 
 #mazeCanvas {
     background-color: #7FA347;
@@ -26,10 +31,12 @@
 .msgBox {
     border-radius: 5px;
     text-align: center;
+    padding: 15px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .restartMazeBTN {
+    width: 100%;
     background-color: #af4c91;
     color: white;
     padding: 10px 20px;

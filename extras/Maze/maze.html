@@ -5,39 +5,39 @@
 
 <div class="projectContainer">
     <div class="mazeContainer_columns">
-        <div class="mazeContainer_rows">
-            <div id="mazeMessageBox" class="msgBox"></div>
-            <table style="padding-right: 15px;">
-                <tr>
-                    <td></td>
-                    <td>
-                        <button id="btnUp" class="mazeBTN">Up</button>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <button id="btnLeft" class="mazeBTN">Left</button>
-                    </td>
-                    <td>
-                        <button class="restartMazeBTN" onclick="RestartMaze()">New Game</button>
-                    </td>
-                    <td>
-                        <button id="btnRight" class="mazeBTN">Right</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button id="btnDown" class="mazeBTN">Down</button>
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <!-- TODO: Fix Height And Width To Be Adjustable -->
-         <div><canvas id="mazeCanvas" height="400px" width="400px"> </canvas></div>    
+        <div id="mazeMessageBox" class="msgBox"></div>
+        <br>
+        <table>
+            <tr>
+                <td></td>
+                <td style="align-items: center; text-align: center;">
+                    <button id="btnUp" class="mazeBTN">Up</button>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="align-items: center; text-align: center;">
+                    <button id="btnLeft" class="mazeBTN">Left</button>
+                </td>
+                <td style="align-items: center; text-align: center;">
+                    <button class="restartMazeBTN" onclick="RestartMaze()">New Game</button>
+                </td>
+                <td style="align-items: center; text-align: center;">
+                    <button id="btnRight" class="mazeBTN">Right</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="align-items: center; text-align: center;">
+                    <button id="btnDown" class="mazeBTN">Down</button>
+                </td>
+                <td></td>
+            </tr>
+        </table>
     </div>
+    <br>
+    <!-- TODO: Fix Height And Width To Be Adjustable -->
+    <div class="canvasContainer"><canvas id="mazeCanvas" height="400px" width="400px"> </canvas></div>
 </div>
 
 <script src="maze.js"></script>
