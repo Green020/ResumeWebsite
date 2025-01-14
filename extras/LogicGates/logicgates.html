@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="logicgates.css">
 
 
-<div>
+<div class="projectContainer">
     <table>
         <tr>
             <td>
@@ -47,5 +47,319 @@
             </td>
         </tr>
     </table>
+    <br>
+    <table class="minimalistBlack" id="openGATE" style="display: block;">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td><b>OPEN</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>OFF</td>
+                <td><b>OPEN</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>OFF</td>
+                <td>ON</td>
+                <td><b>OPEN</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>ON</td>
+                <td><b>OPEN</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="minimalistBlack" id="andGATE">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td><b>AND</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>OFF</td>
+                <td><b>AND</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>OFF</td>
+                <td>ON</td>
+                <td><b>AND</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>ON</td>
+                <td><b>AND</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="minimalistBlack" id="orGATE">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td><b>OR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>OFF</td>
+                <td><b>OR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>OFF</td>
+                <td>ON</td>
+                <td><b>OR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>ON</td>
+                <td><b>OR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="minimalistBlack" id="xorGATE">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td><b>XOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>OFF</td>
+                <td><b>XOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>OFF</td>
+                <td>ON</td>
+                <td><b>XOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>ON</td>
+                <td><b>XOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="minimalistBlack" id="notGATE">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>-</td>
+                <td><b>NOT</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>-</td>
+                <td><b>NOT</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="minimalistBlack" id="nandGATE">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td><b>NAND</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>OFF</td>
+                <td><b>NAND</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>OFF</td>
+                <td>ON</td>
+                <td><b>NAND</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>ON</td>
+                <td><b>NAND</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="minimalistBlack" id="norGATE">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td><b>NOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>OFF</td>
+                <td><b>NOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>OFF</td>
+                <td>ON</td>
+                <td><b>NOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>ON</td>
+                <td><b>NOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="minimalistBlack" id="xnorGATE">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td><b>XNOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>OFF</td>
+                <td><b>XNOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>OFF</td>
+                <td>ON</td>
+                <td><b>XNOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>ON</td>
+                <td><b>XNOR</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="minimalistBlack" id="closedGATE">
+        <thead>
+            <tr>
+                <th>Input A Status</th>
+                <th>Input B Status</th>
+                <th>GATE</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>OFF</td>
+                <td>OFF</td>
+                <td><b>CLOSED</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>OFF</td>
+                <td><b>CLOSED</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>OFF</td>
+                <td>ON</td>
+                <td><b>CLOSED</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:red"></i></td>
+            </tr>
+            <tr>
+                <td>ON</td>
+                <td>ON</td>
+                <td><b>CLOSED</b></td>
+                <td><i class="fa fa-lightbulb-o" style="font-size:30px;color:green"></i></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<script src="logicgates.js"></script>
+<script src="logicgates.js">
+</script>

@@ -1,3 +1,4 @@
+
 .custom-select {
     position: relative;
     width: 50%;
@@ -6,12 +7,14 @@
 select {
     appearance: none;
     -webkit-appearance: none;
-    width: 100px;
-    background-color: #E5E5F7;
-    border: 1px solid #8EB69B;
+    width: 150px;
+    background-color: #af4c91;
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    color: #000000;
     cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.5s ease;
     outline: none;
     font-size: 1em;
     font-weight: bold;
@@ -21,12 +24,13 @@ select {
 }
 
 select:hover {
-    background-color: #e0e0e0;
+    background-color: #64035f;
 }
 
 select:focus {
-    background: #E5E5F7;
-    border: 1px solid #8EB69B;
+    background-color: #af4c91;
+    color: white;
+    border: 1px solid #64035f;
     border-radius: 5px;
 }
 
@@ -56,7 +60,7 @@ select:focus {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: red;
     border-radius: 50%;
 }
 
@@ -65,7 +69,7 @@ select:focus {
 }
 
 .container input:checked~.checkmark {
-    background-color: #2196F3;
+    background-color: green;
 }
 
 .checkmark:after {
@@ -85,4 +89,49 @@ select:focus {
     height: 10px;
     border-radius: 50%;
     background: white;
+}
+
+/* ----- Table ----- */
+.minimalistBlack {
+    border: 3px solid #000000;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    display: none;
+}
+
+.minimalistBlack td,
+.minimalistBlack th {
+    border: 1px solid #000000;
+    padding: 5px 4px;
+}
+
+.minimalistBlack tbody td {
+    font-size: 13px;
+}
+
+.minimalistBlack thead {
+    background: #CFCFCF;
+    background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    border-bottom: 3px solid #000000;
+}
+
+.minimalistBlack thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+}
+
+.minimalistBlack tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    border-top: 3px solid #000000;
+}
+
+.minimalistBlack tfoot td {
+    font-size: 14px;
 }
