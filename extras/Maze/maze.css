@@ -23,8 +23,8 @@
 }
 
 #mazeCanvas {
-    background-color: #7FA347;
-    border: 5px solid #4E6227;
+    background-color: darkgrey;
+    border: 5px solid ;
     border-radius: 5px;
 }
 

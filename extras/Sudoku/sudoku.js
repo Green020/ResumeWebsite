@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function solveHelper(board) {
         const emptyCell = findEmptyCell(board);
         if (!emptyCell) {
-            return true; // Puzzle solved
+            return true;
         }
 
         const [row, col] = emptyCell;

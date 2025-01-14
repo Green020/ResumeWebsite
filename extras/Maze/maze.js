@@ -20,8 +20,8 @@ let points = 0;
 const cols = Math.floor(width / cellSize);
 const rows = Math.floor(height / cellSize);
 
-const playerIcon = { x: 0,y: 0, color: 'red'};
-const end = { x: cols - 1, y: rows - 1, color: 'blue'};
+const playerIcon = { x: 0,y: 0, color: 'green'};
+const end = { x: cols - 1, y: rows - 1, color: 'red'};
 
 const messageBox = document.getElementById('mazeMessageBox');
 messageBox.innerHTML = "<h4 style='color: black; font-weight: bold;'>Complete The Maze To Win The Game!</h4>";
@@ -158,7 +158,7 @@ class CellA {
             pen.moveTo(x, y + cellSize);
             pen.lineTo(x, y);
         }
-        pen.strokeStyle = 'green';
+        pen.strokeStyle = 'black';
         pen.lineWidth = 5;
         pen.lineCap = "round";
         pen.stroke();
@@ -235,7 +235,7 @@ function DrawMaze() {
     DrawPlayer(playerIcon);
     DrawExit();
 
-    pen.strokeStyle = 'green';
+    pen.strokeStyle = 'lightblue';
     pen.lineWidth = 6;
     pen.lineCap = "round";
     pen.stroke();
