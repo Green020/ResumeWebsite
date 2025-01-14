@@ -100,6 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
         puzzle.forEach((row, rowIndex) => {
             const rowElement = document.createElement('div');
             rowElement.classList.add('row');
+            if(rowIndex == 3 || rowIndex == 6){
+                rowElement.style.padding = "3px 0px 0px 0px";
+            }
             row.forEach((cell, columnIndex) => {
                 const cellElement = document.createElement('input');
                 cellElement.classList.add('cell');
