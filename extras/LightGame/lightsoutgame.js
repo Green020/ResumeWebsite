@@ -129,6 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
         messageBox.innerHTML += "<h6 id='moves'>clicks</h6>";
         document.getElementById('moves').innerHTML = "Number of Clicks Taken To Win: " + moveCount;
         messageBox.style.fontSize = "1em"
+
+        moveCount = 0;
     }
 
     // Function to reset the puzzle
