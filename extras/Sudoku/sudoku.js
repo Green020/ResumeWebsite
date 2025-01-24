@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const grid = document.getElementById("sudokucontainer");
 
     // Function to generate a random Sudoku puzzle
-    function generateRandomSudoku() {
+    function GenerateRandomSudoku() {
         const board = [];
         const maxGEN = 25;
 
@@ -28,25 +28,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Function to solve the Sudoku puzzle
-    function solveSudoku(board) {
+    function SolveSudoku(board) {
         // Placeholder function for solving Sudoku puzzle
         const solvedPuzzle = JSON.parse(JSON.stringify(board));
-        solveHelper(solvedPuzzle);
+        SolveHelper(solvedPuzzle);
         return solvedPuzzle;
     }
 
     // Helper function for solving Sudoku recursively
-    function solveHelper(board) {
-        const emptyCell = findEmptyCell(board);
+    function SolveHelper(board) {
+        const emptyCell = FindEmptyCell(board);
         if (!emptyCell) {
             return true;
         }
 
         const [row, col] = emptyCell;
         for (let num = 1; num <= 9; num++) {
-            if (isValidMove(board, row, col, num)) {
+            if (ValidMove(board, row, col, num)) {
                 board[row][col] = num;
-                if (solveHelper(board)) {
+                if (SolveHelper(board)) {
                     return true;
                 }
                 board[row][col] = 0; // Backtrack
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Function to find an empty cell in the Sudoku puzzle
-    function findEmptyCell(board) {
+    function FindEmptyCell(board) {
         for (let row = 0; row < 9; row++) {
             for (let col = 0; col < 9; col++) {
                 if (board[row][col] === 0) {
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Function to check if a move is valid
-    function isValidMove(board, row, col, num) {
+    function ValidMove(board, row, col, num) {
         // Check row
         for (let i = 0; i < 9; i++) {
             if (board[row][i] === num) {
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Function to create the Sudoku puzzle grid
-    function createSudokuGrid(puzzle) {
+    function CreateSudokuGrid(puzzle) {
         grid.innerHTML = '';
         puzzle.forEach((row, rowIndex) => {
             const rowElement = document.createElement('div');
@@ -117,28 +117,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Initialize puzzle
-    let initialPuzzle = generateRandomSudoku();
+    let initialPuzzle = GenerateRandomSudoku();
     let puzzle = JSON.parse(JSON.stringify(initialPuzzle));
     let solvedPuzzle = [];
 
     // Function to solve the puzzle
-    function solvePuzzle() {
-        solvedPuzzle = solveSudoku(puzzle);
-        createSudokuGrid(solvedPuzzle);
+    function SolvePuzzle() {
+        solvedPuzzle = SolveSudoku(puzzle);
+        CreateSudokuGrid(solvedPuzzle);
     }
 
     // Function to reset the puzzle
-    function resetPuzzle() {
-        initialPuzzle = generateRandomSudoku();
+    function ResetPuzzle() {
+        initialPuzzle = GenerateRandomSudoku();
         puzzle = JSON.parse(JSON.stringify(initialPuzzle));
         solvedPuzzle = [];
-        createSudokuGrid(puzzle);
+        CreateSudokuGrid(puzzle);
     }
 
     // Initial puzzle creation
-    createSudokuGrid(puzzle);
+    CreateSudokuGrid(puzzle);
 
     // Attach event listeners to buttons
-    document.getElementById("solveButton").addEventListener("click", solvePuzzle);
-    document.getElementById("resetButton").addEventListener("click", resetPuzzle);
+    document.getElementById("solveButton").addEventListener("click", SolvePuzzle);
+    document.getElementById("resetButton").addEventListener("click", ResetPuzzle);
 });

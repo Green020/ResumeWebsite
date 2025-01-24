@@ -97,9 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         
-
-        console.log (document.getElementsByClassName("lightActive")[0])
-
 		if(CheckForWinner()) {
             SetWinningText();
 		}
@@ -121,17 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
     messageBox.innerHTML = "<h4 style='color: black; font-weight: bold;'>Turn OFF all the lights to win!</h4>";
 
     function SetEasyMode(){
-        console.log(document.getElementById('easyModeSwitch').checked);
-
-        if(document.getElementById('easyModeSwitch').checked){
-            console.log(true);
-            easyMode = true;
-        }
-        else{
-            console.log(false)
-
-            easyMode = false;
-        }
+        if(document.getElementById('easyModeSwitch').checked){ easyMode = true; }
+        else{ easyMode = false; }
     }
 
     function SetWinningText() {
