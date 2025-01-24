@@ -139,8 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
     createSudokuGrid(puzzle);
 
     // Attach event listeners to buttons
-    document.getElementById("solveButton")
-        .addEventListener("click", solvePuzzle);
-    document.getElementById("resetButton")
-        .addEventListener("click", resetPuzzle);
+    document.getElementById("solveButton").addEventListener("click", solvePuzzle);
+    document.getElementById("resetButton").addEventListener("click", resetPuzzle);
 });
