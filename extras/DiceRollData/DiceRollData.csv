@@ -1,4 +1,4 @@
-Class,Character Name,Roll,Die Type,Check / Save / Attack,Attack Range,Attack Type,Damage Dealt,Damage Type,Nat 1 or 20
+Class,Character Name,Roll,Die Type,Roll Reason,Attack Range,Attack Type,Damage Dealt,Damage Type,Nat 1 or 20
 Monk,Ban,12,D20,Check,-,-,-,-,-
 Monk,Ban,14,D20,Check,-,-,-,-,-
 Monk,Ban,7,D20,Attack,Melee,Physical,-,-,-

@@ -1,0 +1,13 @@
+Class Dropdown,Dice Type Dropdown,Roll Reason Dropdown,Attack Range Dropdown,Attack Type Dropdown,Damage Type Dropdown,Nat 1 or 20 Dropdown
+Monk,Custom,Check,-,-,-,-
+Barbarian,D4,Attack,Melee,Physical,Bludgeoning,Nat 1
+Bard,D6,Save,Ranged,Magical,Slashing,Nat 20
+Cleric,D8,Misc,,,Piercing,
+Druid,D10,,,,Force,
+Fighter,D12,,,,,
+Paladin,D20,,,,,
+Ranger,,,,,,
+Rogue,,,,,,
+Sorcerer,,,,,,
+Warlock,,,,,,
+Wizard,,,,,,
